@@ -128,57 +128,16 @@ main{
     color: #CDC2AE;
 }
 .add-country{
+    width: 50%;
     position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    z-index: 10;
-    display: flex;
-    align-items: center;
+    background-color: white;
     display: none;
-}
-.add-country input[type="text"]{
-    box-shadow: 1px 1px 10px var(--black);
-    min-width: 60vh ;
-    padding: 10px 20px;
-    border-radius: 15px;
-    font-size: 1.5rem;
-}
-.search-ico{
-    font-size: 1.8rem;
-    margin-left: -40px;
-}
-*:focus{
-    outline: none;
-}
-.controller i:hover,.controller span:hover{
-    cursor: pointer;
-    color: var(--add-text);
-}
-.close{
-    position: absolute;
-    top: 10vh;
+    height: 20vh;
+    z-index: 10;
     left: 50%;
-    transform: translateX(-50%);
-    font-size: 2rem;
-    color: black;
-    display: flex;
-    align-items: center;
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate;
-}
-.close-ico{
-    font-size: 2.5rem;
-}
-.text-close{
-    font-size: 1.8rem;
-}
-@keyframes glow {
-    from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-    }
-    to {
-      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-    }
+    top: 20%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    border: 1px solid #333C83;
+    box-shadow: 0px 0px 20px #030303;
 }

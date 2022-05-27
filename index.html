@@ -24,12 +24,23 @@
         <div class="controller">
             <i class="ri-add-circle-line" data-btn="show-add-new" onclick="showAdd()"></i><span data-btn="show-add-new" onclick="showAdd()">Add New Country</span>
             <div class="add-country" data-show="search-menu">
-                <span class="close"  onclick="closeSearch()">
-                    <i class="ri-close-line close-ico"></i> 
-                    <span class="text-close">Close</span>
-                </span>
-                <input type="text" id="search" data-search="country">
-                <i class="ri-search-2-line search-ico"></i>
+                <div class="add-country-inner">
+                    <span class="close"  onclick="closeSearch()">
+                        <i class="ri-close-line close-ico"></i> 
+                    </span>
+                        <div>
+                            <h2>Search cities</h2>
+                        </div>
+                        <div class="search-box">
+                            <input type="text" placeholder="Search" class="search-input" onkeyup="searchCity(this.value)">
+                        <i class="ri-search-2-line search-ico"></i>
+                        </div>
+                        <div>
+                            <div>
+                                <h3>Washington D.C., United States</h3>
+                            </div>
+                        </div>
+                </div>
             </div>
         </div>
 
