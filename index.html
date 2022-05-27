@@ -4,11 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style.css">
     <title>World Clock</title>
 </head>
 <body>
     
+    <main>
+        <div class="current-location">
+            <i class="ri-map-pin-2-line"></i>
+            <h3>kolkata, india</h3>
+        </div>
+
+        <div class="current-date-time">
+            <h3 class="time">01:08:32 <span class="meridies">AM</span></h3>
+            <h4 class="date">Wed, 05/26/2022</h4>
+        </div>
+
+        <div class="controller">
+            <i class="ri-add-circle-line"></i><span>Add New Country</span>
+        </div>
+
+        <div class="Diff-Country">
+            <div class="other-location">
+                <i class="ri-delete-bin-line"></i>
+                <h3>New York, USA</h3>
+                <h3 class="other-time">12:56:34<span class="meridies-other">PM</span></h3>
+                <h4 class="other-date">Wed, 05/26/2022</h4>
+                <p class="Time-Diff">-9hr 30min</p>
+            </div>
+
+            <div class="other-location">
+                <i class="ri-delete-bin-line"></i>
+                <h3>California, USA</h3>
+                <h3 class="other-time">1:56:34<span class="meridies-other">PM</span></h3>
+                <h4 class="other-date">Wed, 05/26/2022</h4>
+                <p class="Time-Diff">-10hr 30min</p>
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+
+
+    <!-- <script>
+        navigator.geolocation.getCurrentPosition(hello);
+        function hello(val){
+            console.log(val.coords.latitude);
+            console.log(val.coords.longitude);
+            console.log(val.timestamp);  //epoch time
+        }
+    </script> -->
+    <script src="./assets/script.js"></script>
 </body>
 </html>
