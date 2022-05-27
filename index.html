@@ -17,8 +17,8 @@
         </div>
 
         <div class="current-date-time">
-            <h3 class="time">01:08:32 <span class="meridies">am</span></h3>
-            <h4 class="date">Wed, 05/26/2022</h4>
+            <h3 class="time" data-time="current-time">00:00:00 <span class="meridies">am</span></h3>
+            <h4 class="date" data-time="current-date">Wed, 05/26/2022</h4>
         </div>
 
         <div class="controller">
@@ -28,7 +28,7 @@
                     <i class="ri-close-line close-ico"></i> 
                     <span class="text-close">Close</span>
                 </span>
-                <input type="text" id="search">
+                <input type="text" id="search" data-search="country">
                 <i class="ri-search-2-line search-ico"></i>
             </div>
         </div>
@@ -52,20 +52,13 @@
         </div>
 
     </main>
+    <script>
+        // let val =new Date();
+        
+        // console.log(val.toLocaleString('en-US', { timeZone: 'America/New_York' }));
+    </script>
 
-
-
-
-
-
-    <!-- <script>
-        navigator.geolocation.getCurrentPosition(hello);
-        function hello(val){
-            console.log(val.coords.latitude);
-            console.log(val.coords.longitude);
-            console.log(val.timestamp);  //epoch time
-        }
-    </script> -->
+    <script src="./assets/time.json"></script>
     <script src="./assets/script.js"></script>
 </body>
 </html>
