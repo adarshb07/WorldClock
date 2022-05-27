@@ -22,8 +22,12 @@
         </div>
 
         <div class="controller">
-            <i class="ri-add-circle-line"></i><span>Add New Country</span>
-            <div class="add-country">
+            <i class="ri-add-circle-line" data-btn="show-add-new" onclick="showAdd()"></i><span data-btn="show-add-new" onclick="showAdd()">Add New Country</span>
+            <div class="add-country" data-show="search-menu">
+                <span class="close"  onclick="closeSearch()">
+                    <i class="ri-close-line close-ico"></i> 
+                    <span class="text-close">Close</span>
+                </span>
                 <input type="text" id="search">
                 <i class="ri-search-2-line search-ico"></i>
             </div>
