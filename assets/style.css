@@ -74,12 +74,18 @@ main{
     /* font-size: 1.5rem; */
     margin-top: -10px;
     gap: 10px;
+    flex-wrap: wrap;
 }
 .Diff-Country .country-label{
-    font-size: 1.7rem;
+    position: relative;
+    font-size: 1.5rem;
     text-transform: capitalize;
+    text-overflow: ellipsis;
     margin-top: 30px;
     font-weight: 300;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden ;
 }
 
 .other-location{
