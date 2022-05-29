@@ -228,3 +228,39 @@ main{
     background-color: #333c83c4;
     border-radius: 5px;
 }
+@media screen and (max-width:700px) {
+    .add-country{
+        min-width: 90%;
+        left: 15px;
+        transform: translate(0);
+    }
+    .cities-list{
+        height: 55vh;
+    }
+    .current-date-time .time{
+        font-size: 2.5rem;
+        margin: 0;
+    }
+    .current-date-time{
+        margin-left: 20px;
+    }
+    .current-location{
+        margin-bottom: 10px;
+        margin-left: 25px;
+    }
+    .controller{
+        margin-top: 40px;
+    }
+    .other-location{
+        width: 90%;
+        margin-top: 10px;
+    }
+    .other-location:first-child{
+        /* width: 90%; */
+        margin-top: 52px;
+    }
+    .Diff-Country{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
