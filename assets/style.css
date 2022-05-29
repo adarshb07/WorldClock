@@ -191,12 +191,34 @@ main{
 .cities-items{
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: center; */
+    justify-content: space-between;
     align-items: center;
     gap: 10px;
-    padding: 8px 0px;
+    padding: 8px 15px;
 }
 .cities-items:nth-child(odd){
+    background-color: #dedfe3;
+    color: rgb(0, 0, 0);
+}
+/* .ri-check-fill{
+    color: green;
+    font-weight: 600;
+    font-size: 1.5rem;
+} */
+.cities-items:hover{
+    cursor: pointer;
     background-color: #333C83;
     color: white;
+}
+/* width */
+.cities-list::-webkit-scrollbar {
+    width: 15px;
+}
+.cities-list::-webkit-scrollbar-track{
+    background-color: #efefef;
+    /* border-radius: 5px; */
+}
+.cities-list::-webkit-scrollbar-thumb{
+    background-color: #333c83c4;
+    border-radius: 5px;
 }
