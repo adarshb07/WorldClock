@@ -6,12 +6,11 @@ let showAddNewCountry = document.querySelectorAll('[data-btn="show-add-new"]');
 let showCountryElement = document.querySelector('[data-show="search-menu"]');
 let CurrentTimeElement = document.querySelector('[data-time="current-time"]');
 let CityList = document.querySelector('[data-city="list"]');
-
-
 let dataList = [];
 let functionCounter = 0;
 let TimeZoneSaver = [];
 /* ------ Current Date and Time Start ------ */
+showTime();
 function showTime() {
     const date = new Date();
     let h = date.getHours();
@@ -54,18 +53,11 @@ function closeSearch() {
     body.style.backgroundColor = "white";
 }
 
-// function searchCity(value)
-// {
-//     console.log(value);
-// }
 //Sort Object By Capital Name
 country.sort((a, b) => {
     return a.capital.localeCompare(b.capital);
 });
 
-// country.forEach(element => {
-//     console.log(element.capital+', '+element.name);
-// });
 function ShowAllTimeZone() {
     country.forEach(element => {
         if (element.capital == '') {
@@ -94,10 +86,8 @@ function addCity(val) {
     let index = 0;
     let countryArr = val.textContent.split(',');
     let addTimeZone = document.querySelector('[data-item="add-other-timeZone"]');
-    // console.log(countryArr[0]);
     if (countryArr.length == 1) {
         index = country.map(element => element.name).indexOf(countryArr[0]);
-        // console.log(index);
         console.log(country[index].timezones[0]);
     }
     else {
@@ -105,8 +95,6 @@ function addCity(val) {
         console.log(index);
         console.log(country[index].timezones[0]);
     }
-    // console.log(date.toLocaleString('en-US', { timeZone: country[index].timezones[0] }));
-
     let timezone = country[index].timezones[0];
     let newElement = document.createElement('div');
     newElement.classList.add('other-location');
@@ -130,7 +118,6 @@ function addCity(val) {
     }
     function OtherTime(TimeZone) {
         TimeZoneSaver.push(TimeZone);
-        // console.log(TimeZone);
         let newDate = date.toLocaleString('en-US', { timeZone: TimeZone });
         let time = new Date(newDate);
         let h = time.getHours();
