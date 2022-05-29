@@ -35,49 +35,7 @@
                             <input type="text" placeholder="Search" class="search-input" onkeyup="searchCity(this.value)">
                         <i class="ri-search-2-line search-ico"></i>
                         </div>
-                        <div class="cities-list">
-                            <div class="cities-items" onclick="addcity()">
-                                <h3>Washington D.C., United States</h3>
-                            </div>
-                            <div class="cities-items" onclick="addcity()">
-                                <h3>Washington D.C., United States</h3>
-                            </div>
-                            <div class="cities-items" onclick="addcity()">
-                                <h3>Washington D.C., United States</h3>
-                            </div>
-                            <div class="cities-items" onclick="addcity()">
-                                <h3>Washington D.C., United States</h3>
-                            </div>
-                            <div class="cities-items" onclick="addcity()">
-                                <h3>Washington D.C., United States</h3>
-                            </div>
-                            <div class="cities-items" onclick="addcity()">
-                                <h3>Washington D.C., United States</h3>
-                            </div>
-                            <div class="cities-items" onclick="addcity()">
-                                <h3>Washington D.C., United States</h3>
-                            </div>
-                            <div class="cities-items" onclick="addcity()">
-                                <h3>Washington D.C., United States</h3>
-                            </div>
-                            <div class="cities-items" onclick="addcity()">
-                                <h3>Washington D.C., United States</h3>
-                            </div>
-                            <div class="cities-items" onclick="addcity()">
-                                <h3>Washington D.C., United States</h3>
-                            </div>
-                            <div class="cities-items" onclick="addcity()">
-                                <h3>Washington D.C., United States</h3>
-                            </div>
-                            <div class="cities-items" onclick="addcity()">
-                                <h3>Washington D.C., United States</h3>
-                            </div>
-                            <div class="cities-items" onclick="addcity()">
-                                <h3>Washington D.C., United States</h3>
-                            </div>
-                            <div class="cities-items" onclick="addcity()">
-                                <h3>Washington D.C., United States</h3>
-                            </div>
+                        <div class="cities-list" data-city="list">
                         </div>
                 </div>
             </div>
@@ -85,7 +43,7 @@
 
         <div class="Diff-Country">
             <div class="other-location">
-                <i class="ri-delete-bin-line del"></i>
+                <i class="ri-delete-bin-line del" onclick="remove(this)"></i>
                 <h3 class="country-label">New York, USA</h3>
                 <h3 class="other-time">12:56:34 <span class="meridies-other">PM</span></h3>
                 <h4 class="other-date">Wed, 05/26/2022</h4>

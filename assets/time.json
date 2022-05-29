@@ -161,7 +161,7 @@ countries=[
         ], 
         "name": "Antarctica", 
         "country_code": "AQ", 
-        "capital": null
+        "capital": "",
     }, 
     {
         "timezones": [
@@ -476,7 +476,7 @@ countries=[
         ], 
         "name": "Bouvet Island", 
         "country_code": "BV", 
-        "capital": null
+        "capital": ""
     }, 
     {
         "timezones": [
@@ -1710,7 +1710,7 @@ countries=[
         ], 
         "name": "Macau", 
         "country_code": "MO", 
-        "capital": null
+        "capital": ""
     }, 
     {
         "timezones": [
@@ -2912,7 +2912,7 @@ countries=[
         ], 
         "name": "United States Minor Outlying Islands", 
         "country_code": "UM", 
-        "capital": null
+        "capital": ""
     }, 
     {
         "timezones": [
