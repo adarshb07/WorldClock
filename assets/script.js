@@ -5,7 +5,6 @@ const country = countries;
 let showAddNewCountry = document.querySelectorAll('[data-btn="show-add-new"]');
 let showCountryElement = document.querySelector('[data-show="search-menu"]');
 let CurrentTimeElement = document.querySelector('[data-time="current-time"]');
-let CityList = document.querySelector('[data-city="list"]');
 let dataList = [];
 let functionCounter = 0;
 let TimeZoneSaver = [];
@@ -30,6 +29,7 @@ function showTime() {
     s = (s < 10) ? '0' + s : s;
     CurrentTimeElement.textContent = `${h}:${m}:${s} ${meridies}`;
     s++;
+    OtherCountryTimeUpdator();
 }
 function SetDate() {
     const clock = new Date();
@@ -59,6 +59,7 @@ country.sort((a, b) => {
 });
 
 function ShowAllTimeZone() {
+let CityList = document.querySelector('[data-city="list"]');
     country.forEach(element => {
         if (element.capital == '') {
             dataList.push(element.name)
@@ -77,7 +78,7 @@ function ShowAllTimeZone() {
             CityList.append(newElement);
         }
     });
-    newElement = '';
+    // newElement = '';
 }
 ShowAllTimeZone();
 
@@ -162,7 +163,6 @@ function OtherCountryTimeUpdator() {
         element.innerHTML = h + ':' + m + ` <span class="meridies-other">${meridies}</span>`;
     });
 }
-setInterval(OtherCountryTimeUpdator, 1000);
 
 function addDate(TimeZone)
 {
@@ -210,9 +210,9 @@ function remove(element) {
     console.log('element removed');
 }
 
-let cityItem = document.getElementsByClassName('cities-items')
 function searchCity(city){
-   Array.from(cityItem).forEach(element => element.remove());
+let CityList = document.querySelector('[data-city="list"]');
+   Array.from(document.getElementsByClassName('cities-items')).forEach(element => element.remove());
     city = city.toLowerCase();
     dataList.map(element =>{
         if(!city || element.toLowerCase().indexOf(city) !== -1)
@@ -221,7 +221,7 @@ function searchCity(city){
             let newElement = document.createElement('div');
             newElement.setAttribute('onclick', 'addCity(this)');
             newElement.classList.add('cities-items');
-            newElement.innerHTML = `<h3>${element}</h3>`
+            newElement.innerHTML = `<h3>${element}</h3>`;
             CityList.append(newElement);
         }
     });

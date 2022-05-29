@@ -16,7 +16,7 @@
 }
 @font-face {
     font-family: 'num-font';
-    src: url('/assets/fonts/BIZUDPGothic-Regular.ttf');
+    src: url('./fonts/BIZUDPGothic-Regular.ttf');
 }
 
 main{
