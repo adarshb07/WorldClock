@@ -70,8 +70,6 @@ main{
 .Diff-Country{
     display: flex;
     align-items: center;
-    /* justify-content: center; */
-    /* font-size: 1.5rem; */
     margin-top: -10px;
     gap: 10px;
     flex-wrap: wrap;
@@ -113,7 +111,6 @@ main{
 .other-time{
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     margin-top: 5px;
     gap: 10px;
     font-weight: 600;
@@ -193,6 +190,7 @@ main{
     height: 50vh;
     margin-top: 20px;
     overflow: auto;
+    border-radius: 10px;
 }
 .cities-items{
     display: flex;
@@ -201,28 +199,19 @@ main{
     align-items: center;
     gap: 10px;
     padding: 8px 15px;
-}
-.cities-items:nth-child(odd){
     background-color: #dedfe3;
-    color: rgb(0, 0, 0);
+    border-bottom: #2A2525 1px solid;
 }
-/* .ri-check-fill{
-    color: green;
-    font-weight: 600;
-    font-size: 1.5rem;
-} */
 .cities-items:hover{
     cursor: pointer;
     background-color: #333C83;
     color: white;
 }
-/* width */
 .cities-list::-webkit-scrollbar {
     width: 15px;
 }
 .cities-list::-webkit-scrollbar-track{
     background-color: #efefef;
-    /* border-radius: 5px; */
 }
 .cities-list::-webkit-scrollbar-thumb{
     background-color: #333c83c4;

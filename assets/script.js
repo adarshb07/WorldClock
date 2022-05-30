@@ -5,7 +5,7 @@ const country = countries;
 let showAddNewCountry = document.querySelectorAll('[data-btn="show-add-new"]');
 let showCountryElement = document.querySelector('[data-show="search-menu"]');
 let CurrentTimeElement = document.querySelector('[data-time="current-time"]');
-let dataList = [];
+// let dataList = [];
 let functionCounter = 0;
 let TimeZoneSaver = [];
 /* ------ Current Date and Time Start ------ */
@@ -62,7 +62,6 @@ function ShowAllTimeZone() {
 let CityList = document.querySelector('[data-city="list"]');
     country.forEach(element => {
         if (element.capital == '') {
-            dataList.push(element.name)
             let newElement = document.createElement('div');
             newElement.setAttribute('onclick', 'addCity(this)');
             newElement.classList.add('cities-items');
@@ -70,7 +69,6 @@ let CityList = document.querySelector('[data-city="list"]');
             CityList.append(newElement);
         }
         else {
-            dataList.push(element.capital+', ' + element.name)
             let newElement = document.createElement('div');
             newElement.setAttribute('onclick', 'addCity(this)');
             newElement.classList.add('cities-items');
@@ -209,20 +207,19 @@ function remove(element) {
     element.parentElement.remove();
     console.log('element removed');
 }
-
 function searchCity(city){
-let CityList = document.querySelector('[data-city="list"]');
-   Array.from(document.getElementsByClassName('cities-items')).forEach(element => element.remove());
-    city = city.toLowerCase();
-    dataList.map(element =>{
-        if(!city || element.toLowerCase().indexOf(city) !== -1)
+    const cityItems = document.getElementsByClassName('cities-items');
+    console.log(cityItems.length);
+    filterInput = city.toLowerCase();
+    for(let i = 0; i< cityItems.length;i++)
+    {
+        let dataList = cityItems[i].textContent || cityItems[i].innerHTML;
+        if(dataList.toLowerCase().indexOf(filterInput) > -1)
         {
-            dataList.push(element.capital+', ' + element.name)
-            let newElement = document.createElement('div');
-            newElement.setAttribute('onclick', 'addCity(this)');
-            newElement.classList.add('cities-items');
-            newElement.innerHTML = `<h3>${element}</h3>`;
-            CityList.append(newElement);
+            cityItems[i].style.display = '';
         }
-    });
+        else{
+            cityItems[i].style.display = 'none';
+        }
+    }
 }
